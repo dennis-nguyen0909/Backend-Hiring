@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
-
+import { UsersModule } from './users/users.module';
+import { registerTypeOrm } from './typeorm';
 @Module({
-  imports: [],
+  imports: [registerTypeOrm, UsersModule],
   controllers: [],
   providers: [],
 })
